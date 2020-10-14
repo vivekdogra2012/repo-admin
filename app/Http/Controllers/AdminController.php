@@ -4,13 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\jr_static_page;
 
 class AdminController extends Controller
 {
     public function adminhome()
     {
-        //$data = Staticpages::all();
         return view('admin.adminindex');
+    }
+
+
+    public function page()
+    {
+        $url = "test1";
+        //  $data = jr_static_page::all();
+         $data = jr_static_page::where('url', $url)->get();
+         return view('admin.staticpage', ['data' =>$data]);
     }
 
     public function insert(request $req)
@@ -34,9 +43,6 @@ class AdminController extends Controller
             'CSS.required'=>'Please Enter CSS',
             'JS.required'=>'Please Enter JS'
         ]);
-
-
-
 
         $Page_URL= $req->input('Page_URL');
         $Page_Heading= $req->input('Page_Heading');

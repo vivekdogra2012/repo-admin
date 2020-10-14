@@ -11,15 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
 
-
+Route::get('/','DashboardController@index');
 Route::get('/admin', "AdminController@adminhome");
 Route::post('/insert', "AdminController@insert");
-// Route::get('/','DashboardController@index');
 
+
+Route::get('/page', "AdminController@page");
 
 include ('route.php');
 
