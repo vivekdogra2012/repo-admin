@@ -84,7 +84,6 @@
     
   </form>
 
-
 @endsection
 
 @push('plugin-scripts')
