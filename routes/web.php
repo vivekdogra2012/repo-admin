@@ -17,6 +17,7 @@
 
 Route::get('/','DashboardController@index');
 Route::get('/admin', "AdminController@adminhome");
+Route::get('/usertable', "UserController@usertable");
 Route::post('/insert', "AdminController@insert");
 
 
