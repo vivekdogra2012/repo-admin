@@ -16,12 +16,11 @@ class AdminController extends Controller
 
     public function page()
     {
-        $url = "test1";
-        //  $data = jr_static_page::all();
+        $url = "junglee-rummy-tv-ads";
+        $data = jr_static_page::all();
          $data = jr_static_page::where('url', $url)->get();
          return view('admin.staticpage', ['data' =>$data]);
     }
-
     public function insert(request $req)
     {
         $req->validate([

@@ -8,11 +8,6 @@ use App\jr_static_page;
 
 class UserController extends Controller
 {
-    // public function usertable(){
-    //     $users = DB::table('select * from jr_static_pages');
-    //     return view('usertable',['users'=>$users]);
-    //     }
-        // DB::table('jr_static_pages')->insert($data);
 
         public function usertable()
     {

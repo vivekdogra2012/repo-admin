@@ -6,13 +6,21 @@
 
 @section('content')
 <div class="col-md-12">
-    <h1>static page</h1>
+    <h4>Static Page</h4>
 
 <ul>
-@foreach($data as $i)
+  <div class="title">
 
-<li>{{ $i }}</li>
-<!-- <li>{{ $i->content }}</li> -->
+</div>
+@foreach($data as $i)
+<!-- 
+<div>{{ $i->heading }}</div>
+<div>{{ $i->meta_tag }}</div> 
+<div>{{ $i->meta_tag }}</div> 
+<div img src="{{ $i->desktop_banner }}"></div> 
+<img src="{{$i->desktop_banner}}" class="event-page-country-logo"> -->
+
+{!! html_entity_decode($i->content) !!}
 
 @endforeach
 </ul>
