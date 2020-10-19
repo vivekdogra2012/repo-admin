@@ -137,6 +137,12 @@ Route::group(['prefix' => 'ecommerce'], function(){
     Route::get('orders', function () { return view('pages.ecommerce.orders'); });
 });
 
+
+
+// for frontend routing
+Route::get('/junglee-rummy-tv-ads', "frontend\PageController@newpage");
+Route::get('/static', "frontend\PageController@newstatic");
+
 // For Clear cache
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');

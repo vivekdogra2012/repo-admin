@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="col-md-12">
-    <h3>JWR Static Page CMS V2.0</h3>
+    <h3>Datatable</h3>
 </div>
 
   <!-- datatable -->
@@ -24,9 +24,7 @@
             <tr>
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->url }}</td>
-                
-                <!-- <td>{{ $user->author }}</td>
-                <td>{{ $user->created_at }}</td> -->
+     
             </tr>
             @endforeach
         </tbody>
